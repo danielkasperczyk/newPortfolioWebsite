@@ -1,0 +1,35 @@
+.work__box{
+    display: flex;
+    position: relative;
+    height: 250px;
+    &_image{
+    &:nth-child(even){
+        position: absolute;
+        right: 0;
+    }
+        width: 150px;
+        height: 150px;
+        background-color: black;
+    }
+    &_content{
+        z-index:10;
+        h3{ margin-bottom: 1rem;}
+        align-self: center;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        &:nth-child(odd){
+            align-items: flex-start;
+        }
+        &--bg{
+            width: 80%;
+            background-color: $light-color;
+            p{
+                padding: 1rem;
+                color: #486575;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

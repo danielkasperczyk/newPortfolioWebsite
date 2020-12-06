@@ -1,0 +1,14 @@
+@import './utilities/variables';
+@import './base/reset';
+@import './base/typography';
+
+@import './components/navDesktop';
+@import './components/navMobile';
+@import './components/navButton';
+@import './components/images';
+@import './components/buttons';
+@import './components/work';
+
+@import './layout/header';
+@import './layout/about';
+@import './layout/footer';

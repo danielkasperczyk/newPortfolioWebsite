@@ -1,0 +1,60 @@
+.navMobile{
+    z-index:20;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 60%;
+    //ZMIENIĆ NA FLEX
+    display: none;
+    //ZMIENIC NA FLEX
+    justify-content: center;
+    align-items: center;
+    background: $bg-color;
+    border-radius: 0 2rem 2rem 0;
+    box-shadow: 3px 0px 10px 4px #344854;
+    &__box{
+        height: 70%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &--link{
+            font-size: 2rem;
+            color: $bgLight-color;
+            position: relative;
+            &::after{
+                content: '';
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 3px;
+                bottom: -5px;
+                background-color: $light-color;
+            }
+        }
+    }
+    &__blur {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        filter: blur(5px);
+        //DELETE
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .navMobile {
+        display: none;
+
+        &__blur{
+            display: none;
+        }
+    }
+}
