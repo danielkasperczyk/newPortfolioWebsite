@@ -68,19 +68,6 @@
             justify-content: center;
         }
         &__image{
-            flex: 3;
-            width: 200px;
-            &--circle{
-                width: 250px;
-                height: 250px;
-            }
-        }
-    }
-}
-@media screen and (min-width: 769px){
-    .header{
-
-        &__image{
             justify-content: flex-end;
             &--circle{
                 width: 300px;
@@ -89,6 +76,11 @@
         }
     }
 }
+@media screen and (min-width: 1025px){
+    .header{
+        width: 65vw;
+    }
+  }
 @media screen and (min-width: 1201px){
     .header{
         &__text{

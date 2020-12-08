@@ -20,6 +20,11 @@ body {
         width: 75vw;
     }
 }
+@media screen and (min-width: 1025px){
+  .container{
+      width: 65vw;
+  }
+}
 @media screen and (min-width: 1400px){
     .container{
         width: 60vw;
