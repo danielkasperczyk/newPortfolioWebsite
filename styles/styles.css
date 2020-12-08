@@ -6,6 +6,7 @@
 html {
   font-size: 62.5%;
   font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -167,7 +168,9 @@ h3 {
   left: 0;
   height: 100vh;
   width: 60%;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -178,6 +181,17 @@ h3 {
   border-radius: 0 2rem 2rem 0;
   -webkit-box-shadow: 3px 0px 10px 4px #344854;
           box-shadow: 3px 0px 10px 4px #344854;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.navMobile--show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .navMobile__box {
@@ -215,13 +229,14 @@ h3 {
 }
 
 .navMobile__blur {
+  z-index: 10;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
   display: none;
 }
 
@@ -682,7 +697,7 @@ h3 {
         grid-template-columns: repeat(2, minmax(200px, 1fr));
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: "about workingWith" "location lookingFor";
+        grid-template-areas: "about workingWith" "location lookingFor";
   }
   .about__box:nth-child(1) {
     -ms-grid-row: 1;

@@ -11,17 +11,17 @@
     <nav>
         <div class="desktopNav">
             <ul class="container">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Works</a></li>
-                <li><a href="#">Contact </a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Works</a></li>
+                <li><a href="#contact">Contact </a></li>
             </ul>
         </div>
         <div class="navMobile__blur"></div>
         <div class="navMobile">
             <div class="navMobile__box">
-            <a href="#" class="navMobile__box--link link">About</a>
-            <a href="#" class="navMobile__box--link link">Works</a>
-            <a href="#" class="navMobile__box--link link">Contact</a>
+            <a href="#about" class="navMobile__box--link link">About</a>
+            <a href="#work" class="navMobile__box--link link">Works</a>
+            <a href="#contact" class="navMobile__box--link link">Contact</a>
         </div>
         </div>
         <button class="navMobile__button">
@@ -36,8 +36,11 @@
             <h1>Daniel Kasperczyk.</h1>
             <p>I am Front End developer, specialized in building websites, application and design</p>
             <div class="header__text--buttons">
-                <button class="button">CV</button>
-                <a href="#" class="button">Linkdin</a>
+                <a href="./CV.png" class="button" download>CV</a>
+                <a 
+                href="https://www.linkedin.com/in/daniel-kasperczyk-0a0a39185/" 
+                class="button"
+                target="_blank">Linkdin</a>
             </div>
         </div>
         <div class="header__image">
@@ -149,7 +152,7 @@
             <img src="https://source.unsplash.com/random/400x400"  class="work__box_image"alt="">
         </div>
     </section>
-    <footer class="footer container">
+    <footer class="footer container" id="contact">
         <h2 class="light--text">Get in touch</h2>
         <p>Currently I am looking for job where I will be able to improve my programming s
             kills and learn from experienced people who like to shere their knowledge</p>
@@ -158,5 +161,6 @@
         <a class="linkColor" href="#">Linkedin</a>
         <a class="linkColor" href="#">Github</a>
     </footer>
+    <script src="./index.js"></script>
 </body>
 </html>
