@@ -6,22 +6,29 @@
     &__box{
     margin-bottom: 2rem;
     display: flex;
+    justify-content: flex-start;
     position: relative;
     height: 250px;
     &:nth-child(odd){
         justify-content: flex-end;
     }
-    
     &_image{
         width: 150px;
         height: 150px;
-        background-color: black;
-
+        position: relative;
+        img{width: 100%;
+        height: 100%;}
+        &--dark {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: #000;
+            opacity: 0.3;
+        }
     }
     &_content{
-        &:nth-child(odd){
-            align-items: flex-start;
-        }
         z-index:10;
         h3{ margin-bottom: 1rem;}
         align-self: center;
@@ -29,6 +36,9 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        &:nth-child(odd) {
+            align-items: flex-start;
+        }
         &--bg{
             width: 80%;
             background-color: $light-color;
@@ -40,15 +50,13 @@
         }
         &--links{
             margin-top: 1rem;
-            align-self: flex-end;
             font-size: 1.3rem;
             a:nth-child(1){
                 margin-right:3rem;
             }
-            &:nth-child(2){
-                align-self: flex-start;
-            }
+
         }
+
 
     }
     }
@@ -57,6 +65,7 @@
 @media screen and (min-width:481px){
     .work{
         &__box{
+            margin-bottom: 4rem;
             height: auto;
             &_image{
                 width: 200px;
@@ -133,4 +142,7 @@
             }
         }
     }
+}
+.align{
+    align-items: flex-start;
 }

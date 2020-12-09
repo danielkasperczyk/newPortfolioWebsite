@@ -189,6 +189,19 @@ h3 {
           transform: translateX(-100%);
 }
 
+.navMobile__closeBtn {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  font-size: 3rem;
+  padding: 1rem;
+  color: #F2E1C9;
+}
+
 .navMobile--show {
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -237,7 +250,8 @@ h3 {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
-  display: none;
+  visibility: hidden;
+  display: block;
 }
 
 @media screen and (min-width: 769px) {
@@ -250,6 +264,7 @@ h3 {
 }
 
 .navMobile__button {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,6 +358,9 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: relative;
   height: 250px;
 }
@@ -356,7 +374,22 @@ h3 {
 .work__box_image {
   width: 150px;
   height: 150px;
-  background-color: black;
+  position: relative;
+}
+
+.work__box_image img {
+  width: 100%;
+  height: 100%;
+}
+
+.work__box_image--dark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.3;
 }
 
 .work__box_content {
@@ -376,14 +409,14 @@ h3 {
           align-items: flex-end;
 }
 
+.work__box_content h3 {
+  margin-bottom: 1rem;
+}
+
 .work__box_content:nth-child(odd) {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-}
-
-.work__box_content h3 {
-  margin-bottom: 1rem;
 }
 
 .work__box_content--bg {
@@ -399,8 +432,6 @@ h3 {
 
 .work__box_content--links {
   margin-top: 1rem;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
   font-size: 1.3rem;
 }
 
@@ -408,13 +439,9 @@ h3 {
   margin-right: 3rem;
 }
 
-.work__box_content--links:nth-child(2) {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
 @media screen and (min-width: 481px) {
   .work__box {
+    margin-bottom: 4rem;
     height: auto;
   }
   .work__box_image {
@@ -492,6 +519,12 @@ h3 {
     padding: 1.5rem;
     font-size: 1.4rem;
   }
+}
+
+.align {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .header {

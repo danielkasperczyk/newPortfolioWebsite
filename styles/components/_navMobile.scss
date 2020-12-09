@@ -13,6 +13,18 @@
     box-shadow: 3px 0px 10px 4px #344854;
     transition: transform 500ms;
     transform: translateX(-100%);
+    &__closeBtn{
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        border: none;
+        background-color: transparent;
+        outline: 0;
+        font-size: 3rem;
+        padding: 1rem;
+        color: $light-color
+    }
     &--show{
         transform: translateX(0);
     }
@@ -49,7 +61,8 @@
         left: 0;
         background-color: rgba(0,0,0, 0.5); 
         pointer-events: none;
-        display: none;
+        visibility: hidden;
+        display: block;
     }
 }
 
