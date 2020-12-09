@@ -1,0 +1,23 @@
+.button {
+    background-color: $special-color;
+    display: block;
+    text-decoration: none;
+    padding: 0.5rem 1.3rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    outline: 0;
+    display: flex;
+    border: none;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1025px){
+    .button {
+        padding: 0.5rem 1.5rem;
+        font-size: 1.75rem;
+    }
+}

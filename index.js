@@ -1,22 +1,25 @@
 const button = document.querySelector('.navMobile__button');
 const navigation = document.querySelector('.navMobile');
-const navigationBg = document.querySelector('.navMobile__blur')
+const links = navigation.querySelectorAll('a');
+const closeBtn = document.querySelector('.navMobile__closeBtn');
 
-function showNav(e){
+function showNav(){
     if(!(navigation.classList.contains('navMobile--show'))){
         navigation.classList.add('navMobile--show')
-        navigationBg.style.display = 'block';
         document.body.style.height = "100%"
         document.body.style.overflow = "hidden";
     }
     else{
         navigation.classList.remove('navMobile--show')
-        navigationBg.style.display = 'none';
         document.body.style.height = "auto"
         document.body.style.overflow = "visible";
     }
-    console.log(e);
+    
 }
-
+closeBtn.addEventListener('click', showNav);
 button.addEventListener('click', showNav);
-navigationBg.addEventListener('click', showNav)
+navigation.querySelector('.navMobile__box').addEventListener('click', e=>{
+    if(e.target.tagName.toLowerCase() === 'a'){
+        showNav();
+    }
+})
